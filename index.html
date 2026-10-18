@@ -355,7 +355,7 @@ $("#nName").addEventListener("click",toTop);document.querySelector('#tabbar a[da
 const root=document.documentElement;
 $("#theme").onclick=()=>{const dark=root.dataset.theme?root.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;root.dataset.theme=dark?"light":"dark";
  const b=$("#theme");b.classList.remove("pulse");void b.offsetWidth;b.classList.add("pulse");
- if(matchMedia("(max-width:760px)").matches){try{navigator.vibrate&&navigator.vibrate(12)}catch(e){}toast(dark?"Light mode":"Dark mode")}};
+ if(matchMedia("(max-width:760px)").matches){try{navigator.vibrate&&navigator.vibrate(12)}catch(e){}}};
 const frame=$("#frame");
 frame.addEventListener("mousemove",e=>{const b=frame.getBoundingClientRect(),x=(e.clientX-b.left)/b.width-.5,y=(e.clientY-b.top)/b.height-.5;frame.style.transform=`rotateY(${x*8}deg) rotateX(${-y*8}deg)`});
 frame.addEventListener("mouseleave",()=>frame.style.transform="");
