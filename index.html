@@ -322,7 +322,7 @@ function render(){
   a.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d=""/></svg>';a.querySelector("path").setAttribute("d",IC[k]);cg.append(a)});
  const cv=$("#cvBtn"),hasCv=!!d.cvFile||!!(C.cv&&C.cv.trim()&&C.cv.trim()!=="#");cv.hidden=!hasCv;cv.href=d.cvFile?"#":safe(C.cv);
  $("#pcount").textContent=d.projects.length;
- $("#foot .wrap").textContent="© "+new Date().getFullYear()+" "+d.name+". Built with HTML, CSS and JavaScript.";
+ $("#foot .wrap").textContent="© "+new Date().getFullYear()+" "+d.name+". Portfolio";
  reveal();
  if(PW)queueAuto();
 }
